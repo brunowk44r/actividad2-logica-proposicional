@@ -1,0 +1,25 @@
+ACTIVIDAD 2 - Protocolo de decisión verificable (préstamo de equipo de laboratorio)
+Fundamentos de Inteligencia Artificial (E-FIA-3) - UPP
+Alumno: Bruno Huerta Morales     Docente: Dr. Jaime Aguilar Ortiz
+
+Requisitos: Python 3.8 o superior. No se usan paquetes adicionales.
+Los cuatro archivos .py deben quedar en la misma carpeta.
+En Spyder: abrir el archivo y pulsar F5. En terminal: ver ejemplos.
+
+1) tabla_verdad.py  (genera la tabla de verdad y la clasifica)
+   python tabla_verdad.py "((p & q) -> r)"
+   python tabla_verdad.py                 <- modo interactivo ('salir' para terminar)
+   Escritura: ~ negación, & conjunción, | disyunción, -> implicación, <-> bicondicional
+
+2) verificador_consistencia.py  (busca modelos de varias fórmulas)
+   python verificador_consistencia.py "p" "(p -> q)"          -> consistente, 1 modelo
+   python verificador_consistencia.py "p" "(p -> q)" "~q"     -> inconsistente
+
+3) sistema_reglas_proposicional.py  (encadenamiento hacia adelante con traza)
+   python sistema_reglas_proposicional.py                 <- versión original, 8 escenarios
+   python sistema_reglas_proposicional.py prueba          <- versión con R2 errónea (d -> e)
+   python sistema_reglas_proposicional.py corregida E3    <- solo el escenario E3
+
+4) probar_protocolo.py  (pruebas de la Tabla 8 + tabla de los 8 escenarios en las
+   tres versiones, con comprobación de consistencia mediante verificador_consistencia.py)
+   python probar_protocolo.py
